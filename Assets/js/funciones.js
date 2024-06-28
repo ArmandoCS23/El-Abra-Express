@@ -5,12 +5,29 @@ document.addEventListener("DOMContentLoaded", function(){
             url: base_url + "Usuarios/listar",
             dataSrc: ''
         },
-        columns: [{
-            'data' : 'id',
-            'data' : 'usuario',
-            'data' : 'nombre',
-            'data' : 'id_caja'
-        }]
+        columns: [
+            {
+            'data' : 'id'
+            },
+            {
+                'data' : 'usuario'
+
+            },
+            {
+                'data' : 'nombre'
+
+            },
+            {
+                'data' : 'caja'
+            },
+            {
+                'data' : 'estado'
+
+            },
+            {
+                'data' : 'acciones'
+            }
+        ]
     });
 })
 function frmLogin(e) {
@@ -43,4 +60,7 @@ function frmLogin(e) {
             }
         }
     }
+}
+function frmUsuario() {
+    $("#nuevo_usuario").modal("show");
 }
